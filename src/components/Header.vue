@@ -9,14 +9,36 @@ export default {
 
 
 <template>
-  <div class="logo">
-    <!-- <img src="../../public/Yugioh_anime_logo.webp" alt="" -->
-    <h1>{{ titleStr }}</h1>
-  </div>
+    <header>
+        <div class="logo">
+            <img  src="../../public/Yugioh_anime_logo.webp" alt="">
+        </div>
+        <h1>{{ titleStr }}</h1>
+    </header>
+  
 </template>
 
 
 
-<style>
+<style lang="scss" scoped>
+
+header {
+    display: flex;
+    align-items: center;
+    height: 50px;
+ h1{
+    font-size: 2rem;
+    margin-left: 10px;
+    }
+}
+.logo {
+
+    img{
+        width: 50px;
+        margin-bottom: 5px;
+        margin-left: 20px;
+    }
+}
+
 
 </style>

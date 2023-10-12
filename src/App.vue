@@ -3,11 +3,13 @@
 import axios from 'axios';
 import Header from './components/Header.vue'
 import { store } from './data/store'
+import CardsContainer from './components/CardsContainer.vue';
 
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    CardsContainer
   },
   data(){
     return{
@@ -19,6 +21,7 @@ export default {
     getApi(){
       axios.get(store.apiUrl)
       .then( res => {
+        store.cardList = res.data.Object
         console.log(res.data);
       })
       .catch(err => {
@@ -34,8 +37,8 @@ export default {
 
 
 <template>
-  <Header titleStr="Yu Gi Oh"/>
-
+  <Header titleStr="Yu-Gi-Oh Api"/>
+  <CardsContainer />
 </template>
 
 
