@@ -11,7 +11,7 @@ export default {
 <template>
     <header>
         <div class="logo">
-            <img  src="../../public/Yugioh_anime_logo.webp" alt="">
+            <img  src="/Yugioh_anime_logo.webp" alt="">
         </div>
         <h1>{{ titleStr }}</h1>
     </header>
